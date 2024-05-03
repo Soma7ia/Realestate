@@ -1,0 +1,53 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+@import "./base.scss";
+@import "./header.scss";
+@import "./signin.scss";
+@import "./signup.scss";
+@import "./forgot-password.scss";
+@import "./form-title.scss";
+@import "./form-fields.scss";
+@import "./text-link.scss";
+@import "./dashboard.scss";
+@import "./tab-nav.scss";
+@import "./newsletter-grid.scss";
+@import "./newsletter-box.scss";
+@import "./newsletter-archive.scss";
+@import "./newsletter-latest.scss";
+@import "./button.scss";
+@import "./newsletter-new.scss";
+@import "./newsletter-new-form.scss";
+@import "./newsletter-details.scss";
+@import "./requests-grid.scss";
+@import "./requests.scss";
+@import "./requests-boxes.scss";
+@import "./requests-box.scss";
+@import "./requests-item.scss";
+
+html {
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  overflow-x: hidden;
+  font-weight: normal;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.app {
+  margin-top: 2rem;
+  display: grid;
+  justify-items: center;
+}

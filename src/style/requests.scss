@@ -1,0 +1,9 @@
+.requests {
+  grid-row: s/e;
+  grid-column: requests-s/requests-s;
+  align-self: start;
+  display: grid;
+  grid-row-gap: 2rem;
+  border: 0.1rem solid $color-gray-E6;
+  border-radius: 0.5rem;
+}

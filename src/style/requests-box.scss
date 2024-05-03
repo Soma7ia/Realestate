@@ -1,0 +1,102 @@
+.requests-box {
+  height: 16rem;
+  width: 16rem;
+  align-content: center;
+  border: 0.15rem solid $color-red-BA;
+  border-radius: 0.5rem;
+  color: $color-red-BA;
+  display: grid;
+  grid-template-rows: [s] 8.1rem [m] 2.3rem [e];
+  grid-template-columns: [s] 1fr [e];
+  justify-items: center;
+  cursor: pointer;
+
+  &:hover {
+    border-color: $color-red-BA;
+    background-color: white;
+
+    .requests-box__point {
+      display: none;
+    }
+
+    .requests-box__count {
+      opacity: 0;
+    }
+
+    .requests-box__icon {
+      opacity: 1;
+    }
+
+    .requests-box__title {
+      color: $color-red-BA;
+    }
+  }
+
+  &__count,
+  &__icon {
+    transition: all 0.15s ease-in-out;
+    align-self: end;
+    font-size: 7rem;
+    line-height: 8.1rem;
+    margin-bottom: 1rem;
+    grid-row: s/m;
+    grid-column: s/e;
+  }
+
+  &__icon {
+    opacity: 0;
+    font-size: 5rem;
+  }
+
+  &__title {
+    align-self: start;
+    font-size: 2rem;
+    line-height: 2.3rem;
+    grid-row: m/e;
+    grid-column: s/e;
+  }
+
+  &__point {
+    height: 3rem;
+    width: 3rem;
+    background-color: white;
+    grid-row: s/e;
+    grid-column: s/e;
+    justify-self: end;
+    align-self: center;
+    transform: translateX(52%) rotate(45deg);
+    border: 0.15rem solid $color-red-BA;
+    border-bottom: none;
+    border-left: none;
+  }
+}
+
+.requests-box-active {
+  background-color: $color-red-BA;
+  border-color: $color-red-BA;
+
+  .requests-box {
+    &__title,
+    &__count {
+      color: white;
+    }
+    &__point {
+      background-color: $color-red-BA;
+      border-color: $color-red-BA;
+    }
+  }
+}
+
+.requests-box-inactive {
+  border-color: $color-gray-E6;
+
+  .requests-box {
+    &__title,
+    &__count {
+      color: $color-gray-4D;
+    }
+    &__point {
+      display: none;
+    }
+  }
+}
